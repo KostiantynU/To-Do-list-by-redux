@@ -17,9 +17,9 @@ function Header() {
       <div>
         <h2>Filter by status</h2>
         <FilterButtonsNavigation>
-          <AllBtn>All</AllBtn>
-          <ActiveBtn>Active</ActiveBtn>
-          <CompletedBtn>Completed</CompletedBtn>
+          <AllBtn type="button">All</AllBtn>
+          <ActiveBtn type="button">Active</ActiveBtn>
+          <CompletedBtn type="button">Completed</CompletedBtn>
         </FilterButtonsNavigation>
       </div>
     </HeaderStyled>
