@@ -8,7 +8,7 @@ function ListToDosItem({ toDo, id, checked }) {
   return (
     <ListToDosItemStyled>
       <LabelStyled className={checked ? 'checked' : ''}>
-        <CheckboxStyled type="checkbox" onChange={handleChecked} data-id={id} />
+        <CheckboxStyled type="checkbox" onChange={handleChecked} data-id={id} checked={checked} />
         <p>{toDo} </p>
       </LabelStyled>
       <SubmitBtnStyled type="button" delete={'delete'} data-id={id} onClick={deleteTask}>
