@@ -35,13 +35,13 @@ export const AllBtn = styled.button`
   background: rgb(176, 176, 232);
   &:hover {
     background: rgb(122, 122, 245);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
-    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
-    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.6);
   }
   &.active {
-    transition: background 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-      box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition-property: background 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition-property: box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     background: rgb(73, 73, 252);
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
