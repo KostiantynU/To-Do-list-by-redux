@@ -50,3 +50,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.checked {
+  text-decoration: line-through;
+  background-color: rgb(165, 250, 140);
+}

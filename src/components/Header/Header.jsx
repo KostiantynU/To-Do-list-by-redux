@@ -1,3 +1,4 @@
+import { useMyContext } from 'components/myContext';
 import {
   HeaderStyled,
   TaskInformationParagraph,
@@ -6,20 +7,29 @@ import {
   ActiveBtn,
   CompletedBtn,
 } from './Header.styled';
+
 function Header() {
+  const { activeTasks, completedTasks, clickOnBtn } = useMyContext();
+
   return (
     <HeaderStyled>
       <div>
         <h2>Tasks</h2>
-        <TaskInformationParagraph>Active: </TaskInformationParagraph>
-        <TaskInformationParagraph>Completed: </TaskInformationParagraph>
+        <TaskInformationParagraph>Active: {activeTasks}</TaskInformationParagraph>
+        <TaskInformationParagraph>Completed: {completedTasks}</TaskInformationParagraph>
       </div>
       <div>
         <h2>Filter by status</h2>
         <FilterButtonsNavigation>
-          <AllBtn type="button">All</AllBtn>
-          <ActiveBtn type="button">Active</ActiveBtn>
-          <CompletedBtn type="button">Completed</CompletedBtn>
+          <AllBtn id={'all'} type="button" onClick={clickOnBtn}>
+            All
+          </AllBtn>
+          <ActiveBtn id="active" type="button" onClick={clickOnBtn}>
+            Active
+          </ActiveBtn>
+          <CompletedBtn id={'completed'} type="button" onClick={clickOnBtn}>
+            Completed
+          </CompletedBtn>
         </FilterButtonsNavigation>
       </div>
     </HeaderStyled>

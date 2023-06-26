@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 export const ListToDosItemStyled = styled.li`
   display: flex;
   justify-content: space-between;
-  &:nth-child(2n) {
-    background-color: rgb(227, 227, 227);
+  gap: 0.5rem;
+  margin: 0.5rem;
+  &:nth-of-type(2n) {
+    background-color: rgb(245, 245, 245);
   }
 `;
 export const CheckboxStyled = styled.input`

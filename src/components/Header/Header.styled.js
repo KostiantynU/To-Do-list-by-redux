@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 85vw;
-  height: 100vh;
+  height: 100%;
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
@@ -15,7 +15,6 @@ export const HeaderStyled = styled.header`
   margin-bottom: 1.5rem;
 `;
 
-// export const TaskInformation = styled.div``;
 export const TaskInformationParagraph = styled.p`
   font-size: 16px;
 `;
@@ -40,16 +39,28 @@ export const AllBtn = styled.button`
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
     -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
   }
+  &.active {
+    background: rgb(73, 73, 252);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+  }
 `;
 export const ActiveBtn = styled(AllBtn)`
   background: rgb(126, 237, 128);
   &:hover {
     background: rgb(76, 237, 79);
   }
+  &.active {
+    background: rgb(32, 245, 36);
+  }
 `;
 export const CompletedBtn = styled(AllBtn)`
   background: rgb(235, 157, 228);
   &:hover {
     background: rgb(242, 102, 230);
+  }
+  &.active {
+    background: rgb(247, 49, 230);
   }
 `;
