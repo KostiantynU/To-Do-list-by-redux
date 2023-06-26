@@ -21,6 +21,6 @@ export default ListToDosItem;
 
 ListToDosItem.propTypes = {
   toDo: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
 };

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 85vw;
-  height: 100%;
+  height: 100vh;
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
@@ -40,6 +40,8 @@ export const AllBtn = styled.button`
     -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6) inset;
   }
   &.active {
+    transition: background 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     background: rgb(73, 73, 252);
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
