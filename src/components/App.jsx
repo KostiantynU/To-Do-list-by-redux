@@ -1,14 +1,15 @@
 import { Container } from './Header/Header.styled';
 import Header from './Header/Header';
 import FilterForm from './FilterForm/FilterForm';
-import { ListToDosStyled } from './ListToDos/ListToDos.styled';
+import ListToDos from './ListToDos/ListToDos';
+
 export const App = () => {
   return (
     <Container>
       <Header />
       <main>
         <FilterForm />
-        <ListToDosStyled />
+        <ListToDos />
       </main>
     </Container>
   );
