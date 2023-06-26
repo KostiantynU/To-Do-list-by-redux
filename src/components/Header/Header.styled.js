@@ -30,10 +30,12 @@ export const AllBtn = styled.button`
   border: none;
   border-radius: 5px;
   transition: background 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
   cursor: pointer;
   background: rgb(176, 176, 232);
   &:hover {
+    color: white;
     background: rgb(122, 122, 245);
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.6);
@@ -42,6 +44,7 @@ export const AllBtn = styled.button`
   &.active {
     transition-property: background 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition-property: box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: white;
     background: rgb(73, 73, 252);
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
