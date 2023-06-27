@@ -1,37 +1,23 @@
-import { useMyContext } from 'components/myContext';
-import {
-  HeaderStyled,
-  TaskInformationParagraph,
-  FilterButtonsNavigation,
-  AllBtn,
-  ActiveBtn,
-  CompletedBtn,
-} from './Header.styled';
+// import { useMyContext } from 'components/myContext';
+import { HeaderStyled, FilterButtonsNavigation } from './Header.styled';
+import StatusFilter from 'components/StatusFilter/StatusFilter';
+import TaskCounter from 'components/TaskCounter/TaskCounter';
 
 function Header() {
-  const { activeTasks, completedTasks, clickOnBtn } = useMyContext();
+  // const { activeTasks, completedTasks, clickOnBtn } = useMyContext();
 
   return (
     <HeaderStyled>
-      <div>
+      <section>
         <h2>Tasks</h2>
-        <TaskInformationParagraph>Active: {activeTasks}</TaskInformationParagraph>
-        <TaskInformationParagraph>Completed: {completedTasks}</TaskInformationParagraph>
-      </div>
-      <div>
+        <TaskCounter />
+      </section>
+      <section>
         <h2>Filter by status</h2>
         <FilterButtonsNavigation>
-          <AllBtn id={'all'} type="button" onClick={clickOnBtn}>
-            All
-          </AllBtn>
-          <ActiveBtn id="active" type="button" onClick={clickOnBtn}>
-            Active
-          </ActiveBtn>
-          <CompletedBtn id={'completed'} type="button" onClick={clickOnBtn}>
-            Completed
-          </CompletedBtn>
+          <StatusFilter />
         </FilterButtonsNavigation>
-      </div>
+      </section>
     </HeaderStyled>
   );
 }
