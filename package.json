@@ -2,7 +2,7 @@
   "name": "to-do-list-by-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goitacademy.github.io/to-do-list-by-redux/",
+  "homepage": "https://kostiantynu.github.io/to-do-list-by-redux/",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@redux-devtools/extension": "^3.2.5",
