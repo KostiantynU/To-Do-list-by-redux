@@ -11,21 +11,20 @@ const taskInitialState = [
 const taskReducer = (state = taskInitialState, action) => {
   switch (action.type) {
     case 'task/addTask': {
-      return { ...state, tasks: [...state.tasks, action.payload] };
+      return [...state, action.payload];
     }
     case 'task/deleteTask': {
-      return { ...state, tasks: state.tasks.filter(task => task.id !== action.payload) };
+      return [...state.filter(task => task.id !== action.payload)];
     }
     case 'task/toggleCompleted': {
-      return {
-        ...state,
-        tasks: state.tasks.map(task => {
+      return [
+        ...state.map(task => {
           if (task.id !== action.payload) {
             return task;
           }
           return { ...task, checked: !task.checked };
         }),
-      };
+      ];
     }
     default:
       return state;

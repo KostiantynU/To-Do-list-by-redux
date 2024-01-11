@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+
 export const addTask = text => {
   return {
     type: 'task/addTask',
