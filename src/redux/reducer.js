@@ -11,6 +11,11 @@ const taskInitialState = [
 const taskReducer = (state = taskInitialState, action) => {
   switch (action.type) {
     case 'task/addTask': {
+      if (state.some(el => el.toDo.toLowerCase() === action.payload.toDo.toLowerCase().trim())) {
+        alert('This to do item is already in list!');
+        return [...state];
+      }
+
       return [...state, action.payload];
     }
     case 'task/deleteTask': {
